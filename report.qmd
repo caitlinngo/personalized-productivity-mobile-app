@@ -1,0 +1,116 @@
+---
+title: Productivity Mobile App
+author: Caitlin Ngo
+date: last-modified
+lightbox: true
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+---
+
+* [LINK to FIGMA](https://www.figma.com/file/OyYcKPOH4a16txXYcLAAiF/TO-DO-List?type=design&node-id=0-1&mode=design&t=5Jook3yoN4Lz8JWN-0)
+
+* [LINK to Snack Editor](https://snack.expo.dev/@caitlinngo/tick)
+
+# Overview of Tick
+
+Tick is a simple user-friendly app that you can go on to jot down what you need to do throughout the day. This app has a minimalistic view with aesthetic color, in which users may personalize what they want tick to look like for them
+
+# Key features
+
+A key feature on this app is that there is a progress bar on the bottom keeping track of what you do, and when completed it will say "completed" to make the user feel accomplished. I will attempt to divide the progress bar into how many tasks are currently on users screen and it will fill up each piece whenever user "Ticks" a checkmark
+
+# Individual Screen details
+
+The following section documents the individual screens of the application, the elements on each screen,
+and how the user is expected to interact with the screen.
+
+## Main screen (To-do List)
+
+The main screen serves as the central node for this application.  All other screens return to this screen. This is where you jot and "tick" down your to-do's
+
+### Interactivity on this screen
+
+On this screen, you can click the plus button, and when you do it adds a task line where you can edit the name of your task. When you finish your tasks you can "tick" it off. Once you've finished all your tasks, you can delete the tasks by tapping the minus sign next to the task. The other button next to the plus sign is the button where you can navigate to your settings. When you want to go back to the Welcome screen, you can just swipe down. I made a global variable for tasks when you decide you want to go to the settings screen or the welcome screen, it will still display your tasks when you go back on the to-do page. I also have another gloabl variable for theme when it goes to dark mode which I will talk about on the seetings screen.
+
+### Wireframe design
+
+Below is my wireframe image.
+
+![](./assets/mainscreenWeb.jpg){height=400 fig-align="center"}
+![](./assets/mainscreenDarkWeb.jpg){height=400 fig-align="center"}
+
+The features are already explained in the interactivity but they include adding tasks with the add button, 'ticking' tasks off, the delete button next to the tasks, the settings button, and the swiping down motion to navigate to the welcome screen
+
+### As-built screenshot
+
+Here is a screen shot of the image I created running on my phone.
+
+![](./assets/todoPhone.PNG){height=400 fig-align="center"}
+![](./assets/mainscreenDarkPhone.PNG){height=400 fig-align="center"}
+
+## Welcome screen
+
+The welcome screen is self explanitory, it welcomes the user when you enter the app!
+
+### Interactivity on this screen
+
+I have displayed the current time and date on the top of the screen. This screen only navigates to the main screen (to-do list) and to do that you just follow the arrows and swipe up. 
+
+### Wireframe design
+
+Below is my wireframe image. 
+
+![](./assets/welcomeWeb.jpg){height=400 fig-align="center"}
+![](./assets/welcomeDarkWeb.jpg){height=400 fig-align="center"}
+
+The features included is the clock, the date display, the greeting and quote, and the arrows where you swipe up.
+
+### As-built screenshot
+
+Here is a screen shot of the image I created running on my phone.
+
+![](./assets/welcomePhone.PNG){height=400 fig-align="center"}
+![](./assets/welcomeDarkPhone.PNG){height=400 fig-align="center"}
+
+## Settings screen
+
+The settings screen is where you can change the appearance of the app.
+
+### Interactivity on this screen
+
+This screen includes the global variable where it keeps track of the theme, so that other screens can know if user has clicked light mode or dark mode. Please ignore the automatic button because I just don't have time to code that part, but what I intend to do with it is when the user clicks it, it will auto set the mode where from 7am-8pm, it will be light mode, and from 8pm-7am will be dark mode. There is also a back button where you can navigate back to the mainscreen.
+
+### Wireframe design
+
+Below is my wireframe image.
+
+![](./assets/settingsWeb.jpg){height=400 fig-align="center"}
+![](./assets/settingsDarkWeb.jpg){height=400 fig-align="center"}
+
+Features include a light and dark mode button, and a back button.
+
+### As-built screenshot
+
+Here is a screen shot of the image I created running on my phone.
+
+![](./assets/settingsPhone.PNG){height=400 fig-align="center"}
+![](./assets/settingsDarkPhone.PNG){height=400 fig-align="center"}
+
+# Snack code for this screen
+
+```{=html}
+<div 
+data-snack-id="@caitlinngo/tick" 
+data-snack-platform="web" 
+data-snack-preview="true" 
+data-snack-theme="light" 
+style="overflow:hidden;background:#fbfcfd;border:1px solid var(--color-border);border-radius:4px;height:505px;width:100%"></div>
+<script async src="https://snack.expo.dev/embed.js"></script>
+```
+
+# Reflection
+
+The hardest hook I might say is my useTask. It took me so long to figure out how to make it so that tasks don't disappear when I swipe to the welcome screen or navigate to my settings. It just took a lot of trial and error, to the point where I had to ask chatGPT what I did to my code because I ruined it at some point and needed to redo it. The hardest part was definitely implementing interactivity and all the hooking and global variables. Overall, it was a fun learning experience. I love expressing creativity and ideas and it was really easy to learn especially with a string backgroun in java. It just makes me want to do this more and maybe make Tick actually a thing.
